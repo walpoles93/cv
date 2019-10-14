@@ -67,18 +67,6 @@
       <div class="main">
         $body$
 
-        $if(education)$
-          <h2>Education</h2>
-          $for(education)$
-            <div class="grid">
-              <div class="title">$education.title$</div>
-              <div class="dates">$education.from$ - $education.to$</div>
-              <div class="institution">$education.institution$</div>
-              <div class="description">$education.description$</div>
-            </div>
-          $endfor$
-        $endif$
-
         $if(experience)$
           <h2>Experience</h2>
           $for(experience)$
@@ -87,6 +75,18 @@
               <div class="dates">$experience.from$ - $experience.to$</div>
               <div class="institution">$experience.institution$</div>
               <div class="description">$experience.description$</div>
+            </div>
+          $endfor$
+        $endif$
+
+        $if(education)$
+          <h2>Education</h2>
+          $for(education)$
+            <div class="grid">
+              <div class="title">$education.title$</div>
+              <div class="dates">$education.from$ - $education.to$</div>
+              <div class="institution">$education.institution$</div>
+              <div class="description">$education.description$</div>
             </div>
           $endfor$
         $endif$
