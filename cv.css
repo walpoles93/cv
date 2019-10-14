@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.2em;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+}
+
+:root {
+  font-size: 12px;
+}
+
+body {
+  background-color: #fafbfd;
+  color: #333;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.page {
+  display: flex;
+  width: 595px;
+  height: 842px;
+  box-shadow: 3px 3px 15px black;
+  margin: 2rem auto;
+}
+
+.sidebar {
+  background: linear-gradient(to bottom, #3286aa 60%, #91bbd1);
+  color: #fafbfd;
+  min-width: 30%;
+  width: 30%;
+  height: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.sidebar h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar li {
+  line-height: 1.5em;
+}
+
+.sidebar a {
+  color: #fafbfd;
+  text-decoration: none;
+}
+
+.sidebar .subtitle {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.sidebar .level {
+  background-color: #dce9ef;
+  color: #00356a;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  line-height: 1.2em;
+}
+
+.main {
+  padding: 1rem;
+}
+
+.main h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.main blockquote {
+  background-color: #dce9ef;
+  padding: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.main .grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    "title title"
+    "institution dates"
+    "description description";
+  border-bottom: 1px solid #00356a;
+}
+
+.main .noinst {
+  grid-template-areas:
+    "title dates"
+    "description description";
+}
+
+.main .noinst .dates {
+  margin-top: 0.5rem;
+}
+
+.main .grid .title {
+  grid-area: title;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #00356a;
+  margin-top: 0.5rem;
+}
+
+.main .grid .dates {
+  grid-area: dates;
+  text-align: right;
+  color: #00356a;
+}
+
+.main .grid .institution {
+  grid-area: institution;
+  color: #00356a;
+}
+
+.main .grid .description {
+  grid-area: description;
+  margin: 0.25rem 0;
+}
+
+.main .grid hr {
+  width: 100%;
+}
+
+.main .reference {
+  margin-top: 1.2rem;
+  font-weight: 700;
+}
+
+.fas,.fab {
+  margin-right: 0.5em;
+}

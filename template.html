@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>$title$</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="cv.css">
+  </head>
+  <body>
+    <div class="page" id="page">
+      <div class="sidebar">
+        $if(title)$
+          <h1>$title$</h1>
+        $endif$
+
+        $if(subtitle)$
+          <p class='subtitle'>$subtitle$</p>
+        $endif$
+
+        $if(contact)$
+          <h2>Contact</h2>
+          <ul>
+            $if(contact.mobile)$
+              <li><i class="fas fa-mobile-alt"></i>$contact.mobile$</li>
+            $endif$
+
+            $if(contact.email)$
+              <li><i class="fas fa-envelope-square"></i><a href="mailto:$contact.email$">$contact.email$</a></li>
+            $endif$
+
+            $if(contact.website)$
+              <li><i class="fas fa-globe-europe"></i><a href="https://$contact.website$" target="_blank">$contact.website$</a></li>
+            $endif$
+
+            $if(contact.linkedin)$
+              <li><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/$contact.linkedin$" target="_blank">$contact.linkedin$</a></li>
+            $endif$
+
+            $if(contact.twitter)$
+              <li><i class="fab fa-twitter-square"></i><a href="https://twitter.com/$contact.twitter$" target="_blank">$contact.twitter$</a></li>
+            $endif$
+          </ul>
+        $endif$
+
+        $if(languages)$
+          <h2>Languages</h2>
+          <ul>
+            $for(languages)$
+              <li class="level" style="width: $languages.level$%;">
+                $languages.name$
+              </li>
+            $endfor$
+          </ul>
+        $endif$
+
+        $if(tools)$
+          <h2>Tools</h2>
+          <ul>
+            $for(tools)$
+              <li class="level" style="width: $tools.level$%;">
+                $tools.name$
+              </li>
+            $endfor$
+          </ul>
+        $endif$
+      </div>
+      <div class="main">
+        $body$
+
+        $if(education)$
+          <h2>Education</h2>
+          $for(education)$
+            <div class="grid">
+              <div class="title">$education.title$</div>
+              <div class="dates">$education.from$ - $education.to$</div>
+              <div class="institution">$education.institution$</div>
+              <div class="description">$education.description$</div>
+            </div>
+          $endfor$
+        $endif$
+
+        $if(experience)$
+          <h2>Experience</h2>
+          $for(experience)$
+            <div class="grid $if(experience.institution)$$else$ noinst $endif$">
+              <div class="title">$experience.title$</div>
+              <div class="dates">$experience.from$ - $experience.to$</div>
+              <div class="institution">$experience.institution$</div>
+              <div class="description">$experience.description$</div>
+            </div>
+          $endfor$
+        $endif$
+
+        $if(achievements)$
+          <h2>Achievements</h2>
+          $for(achievements)$
+            <div class="grid noinst">
+              <div class="title">$achievements.title$</div>
+              <div class="dates">$achievements.date$</div>
+              <div class="description">$achievements.description$</div>
+            </div>
+          $endfor$
+        $endif$
+        <p class="reference">References available upon request.</p>
+      </div>
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="xepOnline.jqPlugin.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
